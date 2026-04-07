@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Narmada Retreats - Premium Hotel Design System
+   Inspired by Jabalpur's natural beauty - rivers, marble rocks, and golden sunsets
+*/
+
+@layer base {
+  :root {
+    /* Core Colors - Warm cream and earthy tones */
+    --background: 40 33% 98%;
+    --foreground: 25 20% 15%;
+
+    /* Card - Soft white with warmth */
+    --card: 40 30% 99%;
+    --card-foreground: 25 20% 15%;
+
+    /* Popover */
+    --popover: 40 30% 99%;
+    --popover-foreground: 25 20% 15%;
+
+    /* Primary - Deep teal inspired by Narmada river */
+    --primary: 195 45% 25%;
+    --primary-foreground: 40 30% 98%;
+
+    /* Secondary - Warm beige/cream */
+    --secondary: 35 25% 92%;
+    --secondary-foreground: 25 20% 20%;
+
+    /* Muted */
+    --muted: 35 20% 94%;
+    --muted-foreground: 25 10% 45%;
+
+    /* Accent - Golden amber inspired by sunsets */
+    --accent: 38 80% 55%;
+    --accent-foreground: 25 20% 15%;
+
+    /* Destructive */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 195 45% 35%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 40 25% 97%;
+    --sidebar-foreground: 25 15% 30%;
+    --sidebar-primary: 195 45% 25%;
+    --sidebar-primary-foreground: 40 30% 98%;
+    --sidebar-accent: 38 80% 55%;
+    --sidebar-accent-foreground: 25 20% 15%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 195 45% 35%;
+
+    /* Custom design tokens for hotel theme */
+    --gold: 38 80% 55%;
+    --gold-light: 38 75% 70%;
+    --gold-dark: 38 85% 40%;
+    --river: 195 45% 25%;
+    --river-light: 195 40% 40%;
+    --marble: 0 0% 95%;
+    --forest: 150 25% 35%;
+  }
+
+  .dark {
+    --background: 25 20% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 25 18% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 25 18% 12%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 195 50% 55%;
+    --primary-foreground: 25 20% 10%;
+
+    --secondary: 25 15% 18%;
+    --secondary-foreground: 40 20% 90%;
+
+    --muted: 25 15% 20%;
+    --muted-foreground: 40 15% 60%;
+
+    --accent: 38 75% 50%;
+    --accent-foreground: 25 20% 10%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 15% 22%;
+    --input: 25 15% 22%;
+    --ring: 195 50% 55%;
+
+    --sidebar-background: 25 18% 10%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 195 50% 55%;
+    --sidebar-primary-foreground: 25 20% 10%;
+    --sidebar-accent: 38 75% 50%;
+    --sidebar-accent-foreground: 25 20% 10%;
+    --sidebar-border: 25 15% 22%;
+    --sidebar-ring: 195 50% 55%;
+
+    --gold: 38 75% 50%;
+    --gold-light: 38 70% 60%;
+    --gold-dark: 38 80% 35%;
+    --river: 195 50% 55%;
+    --river-light: 195 45% 65%;
+    --marble: 0 0% 20%;
+    --forest: 150 20% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero text overlay styles */
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      hsl(25 20% 10% / 0.3) 0%,
+      hsl(25 20% 10% / 0.5) 50%,
+      hsl(25 20% 10% / 0.7) 100%
+    );
+  }
+
+  /* Glass morphism for booking form */
+  .glass-card {
+    background: hsl(var(--card) / 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 
+      0 4px 6px -1px hsl(25 20% 10% / 0.1),
+      0 2px 4px -2px hsl(25 20% 10% / 0.1),
+      0 0 0 1px hsl(var(--border) / 0.5);
+  }
+
+  /* Gold gradient for CTAs */
+  .gold-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gold-dark)) 0%,
+      hsl(var(--gold)) 50%,
+      hsl(var(--gold-light)) 100%
+    );
+  }
+
+  /* Room card hover effect */
+  .room-card {
+    @apply relative overflow-hidden rounded-lg transition-all duration-500;
+    box-shadow: 0 4px 20px hsl(25 20% 10% / 0.08);
+  }
+
+  .room-card:hover {
+    box-shadow: 0 20px 40px hsl(25 20% 10% / 0.15);
+    transform: translateY(-4px);
+  }
+
+  /* Elegant link underline */
+  .nav-link {
+    @apply relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300;
+    background: hsl(var(--gold));
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply w-16 h-1 mx-auto;
+    background: linear-gradient(90deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Text shadow for hero */
+  .text-shadow {
+    text-shadow: 0 2px 10px hsl(25 20% 10% / 0.5);
+  }
+
+  /* Smooth image zoom */
+  .img-zoom {
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .img-zoom:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Keyframe animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes carousel-slide {
+  0%, 100% {
+    opacity: 1;
+  }
+  33.33%, 66.66% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out forwards;
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+  opacity: 0;
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }

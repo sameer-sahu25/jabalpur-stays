@@ -1,0 +1,15 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fox Body/Tail Curve -->
+  <path d="M120 420C60 420 20 360 20 280C20 180 120 120 220 120C320 120 400 180 400 280C400 340 360 380 320 400" stroke="currentColor" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Fox Head / Ears Structure -->
+  <path d="M256 420V240L180 140H332L256 240" stroke="currentColor" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M180 140L256 40L332 140" stroke="currentColor" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Interior Details / Whiskers-like lines -->
+  <path d="M200 280C220 320 292 320 312 280" stroke="currentColor" stroke-width="20" stroke-linecap="round"/>
+  <path d="M210 340C230 370 282 370 302 340" stroke="currentColor" stroke-width="20" stroke-linecap="round"/>
+  
+  <!-- Base Connection -->
+  <path d="M120 420H400" stroke="currentColor" stroke-width="24" stroke-linecap="round"/>
+</svg>

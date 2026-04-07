@@ -1,0 +1,530 @@
+[
+  {
+    "id": 1,
+    "name": "Bhawartal Garden",
+    "category": "Park",
+    "address": "Old Napier Town, Jabalpur, Madhya Pradesh",
+    "pinCode": "482001",
+    "latitude": "23.16910000",
+    "longitude": "79.93380000",
+    "entryFee": "₹20 per person",
+    "openingHours": "10:00 AM - 6:00 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800",
+        "attribution": "Unsplash/Park"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800",
+        "attribution": "Unsplash/Garden"
+      }
+    ],
+    "description": "Located in the heart of Jabalpur city in Old Napier Town, Bhawartal Garden is a vibrant public park replete with slides, swings, toy trains, and verdant greenery. Developed by the municipal corporation, it serves as a central hub for morning yoga sessions, fitness enthusiasts, and families. The garden is beautifully landscaped and features a musical fountain that attracts visitors in the evenings. It is a perfect spot for a peaceful walk or a family picnic, offering a serene escape from the urban hustle. The park is well-maintained and provides a safe environment for children to play.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": true,
+      "publicTransport": true
+    },
+    "visitorRating": "4.3",
+    "contactDetails": {
+      "phone": "0761-2400001",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:08.455Z"
+  },
+  {
+    "id": 2,
+    "name": "Dumna Nature Reserve",
+    "category": "Nature Reserve",
+    "address": "Airport Road, near IIITDM, Jabalpur, Madhya Pradesh",
+    "pinCode": "482005",
+    "latitude": "23.18150000",
+    "longitude": "80.02100000",
+    "entryFee": "₹20 per person",
+    "openingHours": "10:30 AM - 6:30 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
+        "attribution": "Unsplash/Forest"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800",
+        "attribution": "Unsplash/Nature"
+      }
+    ],
+    "description": "Spread over a vast area of 1058 hectares, Dumna Nature Reserve is a premier eco-tourism site in Jabalpur. It is home to a diverse range of flora and fauna, including spotted deer, wild boars, jackals, and numerous bird species. The reserve also encompasses the historic Khandari Dam, built in 1883, which serves as a vital water source for the city. Visitors can enjoy nature walks, cycling on designated trails, and bird watching. The park features a children's play area, a toy train, and a small restaurant. Its tranquil environment makes it a favorite destination for nature lovers and families seeking a wilderness experience within city limits.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": false,
+      "publicTransport": true
+    },
+    "visitorRating": "4.1",
+    "contactDetails": {
+      "phone": "0761-2601234",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:08.844Z"
+  },
+  {
+    "id": 3,
+    "name": "Kachnar City Shiva Temple",
+    "category": "Temple",
+    "address": "Kachnar City Main Road, Vijay Nagar, Jabalpur, Madhya Pradesh",
+    "pinCode": "482002",
+    "latitude": "23.19320000",
+    "longitude": "79.91150000",
+    "entryFee": "Free",
+    "openingHours": "7:00 AM - 8:30 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800",
+        "attribution": "Unsplash/Shiva"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800",
+        "attribution": "Unsplash/Statue"
+      }
+    ],
+    "description": "The Kachnar City Shiva Temple is famous for its magnificent 76-foot tall statue of Lord Shiva, standing tall under the open sky. Built in 2004 and opened to the public in 2006, the statue is a major spiritual landmark in Jabalpur. Below the statue lies a cavern containing replicas of the 12 Jyotirlingas from across India. The temple complex is beautifully maintained with lush green lawns and a peaceful atmosphere. The evening aarti is a spiritual highlight, accompanied by devotional music and lights that make the white statue appear ethereal. It has become one of the most visited religious sites in Central India, attracting devotees and tourists alike.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": true,
+      "publicTransport": true
+    },
+    "visitorRating": "4.6",
+    "contactDetails": {
+      "phone": "0761-2641559",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:09.214Z"
+  },
+  {
+    "id": 4,
+    "name": "Pisanhari Ki Madiya",
+    "category": "Temple",
+    "address": "Medical Garha, Near Medical College, Jabalpur, Madhya Pradesh",
+    "pinCode": "482003",
+    "latitude": "23.14850000",
+    "longitude": "79.88200000",
+    "entryFee": "Free",
+    "openingHours": "6:00 AM - 8:00 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=800",
+        "attribution": "Unsplash/Temple"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1519817650390-64a93db51149?w=800",
+        "attribution": "Unsplash/Architecture"
+      }
+    ],
+    "description": "Pisanhari Ki Madiya is a revered 500-year-old Jain pilgrimage center located atop a hill near the Netaji Subhash Chandra Bose Medical College. The temple is significant to the Digambara sect of Jainism and is known for its inspiring history; it was built by a poor woman who saved money by grinding flour (Pisan-hari). To reach the main shrine, visitors must climb approximately 150 steps, which offer a panoramic view of the surrounding greenery and the city. The temple complex includes several smaller shrines, a dharamshala for pilgrims, and well-maintained gardens. It is a place of profound spiritual energy and architectural beauty, reflecting the deep-rooted Jain traditions of the region.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": false,
+      "publicTransport": true
+    },
+    "visitorRating": "4.5",
+    "contactDetails": {
+      "phone": "0761-2420002",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:09.588Z"
+  },
+  {
+    "id": 5,
+    "name": "Tilwara Ghat",
+    "category": "River Ghat",
+    "address": "Tilwara, Jabalpur, Madhya Pradesh",
+    "pinCode": "482003",
+    "latitude": "23.11800000",
+    "longitude": "79.87800000",
+    "entryFee": "Free",
+    "openingHours": "Open 24 hours",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1582972236019-ea4af5faf581?w=800",
+        "attribution": "Unsplash/River"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=800",
+        "attribution": "Unsplash/Ghat"
+      }
+    ],
+    "description": "Tilwara Ghat is one of the most historically and spiritually significant ghats on the banks of the sacred Narmada River. It is famously known as the site where Mahatma Gandhi's ashes were immersed in the river in 1948. The ghat houses the Gandhi Smarak, a memorial dedicated to the Father of the Nation. It is also the location where the Tripuri Congress session was held in 1939. Apart from its historical importance, the ghat is a center for religious activities, with several temples nearby, including the Tilwadeshwar Mahadev Temple. The serene flow of the Narmada and the spiritual ambiance make it a popular spot for both pilgrims and those seeking a quiet moment by the river.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": false,
+      "publicTransport": true
+    },
+    "visitorRating": "4.4",
+    "contactDetails": {
+      "phone": "0761-2400003",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:09.971Z"
+  },
+  {
+    "id": 6,
+    "name": "Bargi Dam",
+    "category": "Dam",
+    "address": "Nagour Highway, Bargi, Jabalpur, Madhya Pradesh",
+    "pinCode": "482056",
+    "latitude": "22.94100000",
+    "longitude": "79.93200000",
+    "entryFee": "₹10 for entry",
+    "openingHours": "9:00 AM - 6:00 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?w=800",
+        "attribution": "Unsplash/Dam"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800",
+        "attribution": "Unsplash/Landscape"
+      }
+    ],
+    "description": "Bargi Dam is one of the first major dams built on the Narmada River and has transformed into a major tourism hub near Jabalpur. The massive reservoir created by the dam offers a stunning landscape of water and hills. The Madhya Pradesh Tourism Development Corporation (MPTDC) operates a resort and a boat club here. Visitors can enjoy a variety of water sports, including speed boating, water scooters, and paddle boating. The highlight is the large cruise boat that takes tourists on a relaxing journey across the backwaters. The area is also a popular spot for bird watching, especially during winters when migratory birds visit the reservoir. It is an ideal destination for a day trip or a weekend getaway.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": true,
+      "publicTransport": true
+    },
+    "visitorRating": "4.4",
+    "contactDetails": {
+      "phone": "0761-2880233",
+      "website": "https://www.mptourism.com"
+    },
+    "createdAt": "2026-03-25T20:57:10.353Z"
+  },
+  {
+    "id": 7,
+    "name": "Rani Durgavati Museum",
+    "category": "Museum",
+    "address": "Near Bhawartal Garden, Napier Town, Jabalpur, Madhya Pradesh",
+    "pinCode": "482001",
+    "latitude": "23.16750000",
+    "longitude": "79.93450000",
+    "entryFee": "₹20 per person",
+    "openingHours": "10:00 AM - 5:00 PM (Closed on Mondays)",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800",
+        "attribution": "Unsplash/Museum"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1518998053574-53fd974d4454?w=800",
+        "attribution": "Unsplash/Art"
+      }
+    ],
+    "description": "Established in 1976, the Rani Durgavati Museum is dedicated to the memory of the valiant Gond queen who fought bravely against the Mughal Empire. Centrally located near Bhawartal Garden, the museum houses a remarkable collection of sculptures, inscriptions, and prehistoric artifacts. The galleries display exquisite stone carvings from the 10th to 12th centuries, mostly collected from the Chausath Yogini Temple and surrounding areas. It also features a dedicated section on tribal life and culture, showcasing traditional tools, ornaments, and art of the Gond and Baiga tribes. The museum provides a deep insight into the rich archaeological and historical heritage of the Narmada Valley and the Mahakoshal region.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": true,
+      "publicTransport": true
+    },
+    "visitorRating": "4.2",
+    "contactDetails": {
+      "phone": "0761-2400004",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:10.753Z"
+  },
+  {
+    "id": 8,
+    "name": "Hanumantal Bada Jain Mandir",
+    "category": "Temple",
+    "address": "Hanumantal Ward, Jabalpur, Madhya Pradesh",
+    "pinCode": "482002",
+    "latitude": "23.17950000",
+    "longitude": "79.94500000",
+    "entryFee": "Free",
+    "openingHours": "8:00 AM - 7:00 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=800",
+        "attribution": "Unsplash/JainTemple"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800",
+        "attribution": "Unsplash/Historical"
+      }
+    ],
+    "description": "Hanumantal Bada Jain Mandir is a historic and architecturally stunning Jain temple situated on the edge of the Hanuman Taal. Built originally in 1686 and later renovated, it is one of the largest independent Jain temples in India, featuring 22 separate shrines within its complex. The temple's structure resembles a fortress with multiple ornate shikharas. It is a major spiritual center for the Digambara Jain community. The sanctum sanctorum houses a beautiful idol of Goddess Padmavati. The temple is known for its peaceful environment and the grand annual procession during Mahavir Jayanti. Its location by the lake adds to its serene and picturesque appeal, making it a must-visit for those interested in heritage and spirituality.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": false,
+      "publicTransport": true
+    },
+    "visitorRating": "4.5",
+    "contactDetails": {
+      "phone": "0761-2400005",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:11.125Z"
+  },
+  {
+    "id": 9,
+    "name": "Tagore Garden",
+    "category": "Park",
+    "address": "Mall Road, South Civil Lines, Sadar, Jabalpur, Madhya Pradesh",
+    "pinCode": "482001",
+    "latitude": "23.15500000",
+    "longitude": "79.94100000",
+    "entryFee": "₹10 per person",
+    "openingHours": "5:00 AM - 6:00 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800",
+        "attribution": "Unsplash/Greenery"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800",
+        "attribution": "Unsplash/Jogging"
+      }
+    ],
+    "description": "Tagore Garden, located in the bustling Sadar area, is a beautifully landscaped public park named after the legendary poet Rabindranath Tagore. It is a popular destination for morning walks, jogging, and recreational activities. The park is characterized by its lush green lawns, well-maintained footpaths, and a variety of trees and flowering plants. It features a children's play area with swings and slides, making it a favorite for local families. Its central location near the shopping districts of Sadar makes it a convenient spot for visitors to relax after a day of exploring the city. The garden is known for its cleanliness and peaceful atmosphere, providing a much-needed green space in the heart of the city.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": true,
+      "publicTransport": true
+    },
+    "visitorRating": "3.9",
+    "contactDetails": {
+      "phone": "0761-2400006",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:11.537Z"
+  },
+  {
+    "id": 10,
+    "name": "Shaheed Smarak",
+    "category": "Monument",
+    "address": "Wright Town, Jabalpur, Madhya Pradesh",
+    "pinCode": "482002",
+    "latitude": "23.16450000",
+    "longitude": "79.92800000",
+    "entryFee": "Free",
+    "openingHours": "10:00 AM - 6:00 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1518998053574-53fd974d4454?w=800",
+        "attribution": "Unsplash/ArtGallery"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800",
+        "attribution": "Unsplash/Monument"
+      }
+    ],
+    "description": "Shaheed Smarak is a premier cultural and historical landmark in Jabalpur, built to commemorate the martyrs of India's freedom struggle. The building's architecture is inspired by the Parliament House in New Delhi. It is world-renowned for the magnificent frescoes (murals) that adorn its walls, balconies, and dome, painted by the internationally acclaimed artist Beohar Rammanohar Sinha and his colleagues from Santiniketan. These paintings depict various phases of India's war of independence, starting from the era of Rani Durgavati. The complex includes a large auditorium, an art gallery, and a library. It serves as a major venue for cultural events, exhibitions, and public gatherings, standing as a proud testament to the city's patriotic heritage.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": true,
+      "publicTransport": true
+    },
+    "visitorRating": "4.3",
+    "contactDetails": {
+      "phone": "0761-2400007",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:11.957Z"
+  },
+  {
+    "id": 11,
+    "name": "Shri Siddh Ganesh Mandir",
+    "category": "Temple",
+    "address": "Near Railway Crossing, Gwarighat, Jabalpur, Madhya Pradesh",
+    "pinCode": "482008",
+    "latitude": "23.11000000",
+    "longitude": "79.93800000",
+    "entryFee": "Free",
+    "openingHours": "6:00 AM - 9:00 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800",
+        "attribution": "Unsplash/Ganesha"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1582972236019-ea4af5faf581?w=800",
+        "attribution": "Unsplash/Aarti"
+      }
+    ],
+    "description": "Located on the banks of the sacred Narmada at Gwarighat, the Shri Siddh Ganesh Mandir is a prominent religious site. The temple is dedicated to Lord Ganesha and is known for its spiritual vibrations and the scenic beauty of its riverside location. Gwarighat is one of the most important ghats in Jabalpur, famous for its daily evening aarti of the Narmada river, which is a mesmerizing spectacle involving hundreds of lamps and devotional chants. The temple complex is often bustling with devotees, especially on Wednesdays and during Ganesh Chaturthi. Visitors can enjoy boat rides on the Narmada and witness the unique sight of the riverbank illuminated during the evening rituals. It is a place where spirituality meets natural beauty.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": false,
+      "publicTransport": true
+    },
+    "visitorRating": "4.5",
+    "contactDetails": {
+      "phone": "0761-2400008",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:12.332Z"
+  },
+  {
+    "id": 12,
+    "name": "Madan Mahal Fort",
+    "category": "Fort",
+    "address": "Madan Mahal Hills, Jabalpur, Madhya Pradesh",
+    "pinCode": "482001",
+    "latitude": "23.15600000",
+    "longitude": "79.90400000",
+    "entryFee": "Free",
+    "openingHours": "7:00 AM - 6:00 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800",
+        "attribution": "Unsplash/Fort"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800",
+        "attribution": "Unsplash/View"
+      }
+    ],
+    "description": "The Madan Mahal Fort, built by the Gond ruler Raja Madan Shah in 1116 AD, is a historic watchtower perched atop a rocky hill. Though not a massive fortress, it served as a crucial military outpost for the Gondwana kingdom, offering a commanding 360-degree view of the Jabalpur city and the surrounding countryside. The fort's simple but sturdy architecture includes rooms, stables, and a small reservoir. It is associated with the legendary Queen Rani Durgavati and her son Madan Singh. The climb to the fort is relatively short but steep, leading through ancient rock formations. Once at the top, visitors are rewarded with a panoramic vista of the city's skyline. It stands as a symbol of the brave Gond dynasty that once ruled Central India.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": false,
+      "publicTransport": true
+    },
+    "visitorRating": "4.1",
+    "contactDetails": {
+      "phone": "0761-2400009",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:12.753Z"
+  },
+  {
+    "id": 13,
+    "name": "Tripur Sundari Temple",
+    "category": "Temple",
+    "address": "Tewar Village, Bhedaghat Road, Jabalpur, Madhya Pradesh",
+    "pinCode": "483053",
+    "latitude": "23.14500000",
+    "longitude": "79.83500000",
+    "entryFee": "Free",
+    "openingHours": "6:00 AM - 8:00 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=800",
+        "attribution": "Unsplash/DeviTemple"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1519817650390-64a93db51149?w=800",
+        "attribution": "Unsplash/Ancient"
+      }
+    ],
+    "description": "The Tripur Sundari Temple is an ancient and highly revered shrine located in Tewar village, about 13 km from the main city. Dating back to the 11th century Kalchuri period, the temple is dedicated to Goddess Tripur Sundari. According to local belief, the idol of the goddess emerged from the ground. The temple's architecture reflects the classical medieval style of Central India. It is a major center of devotion, especially during the Navratri festival, when thousands of pilgrims visit to seek the goddess's blessings. The surrounding village of Tewar is itself an archaeological treasure, being the site of the ancient city of Tripuri. The temple provides a glimpse into the region's rich religious and historical past, combining ancient myths with living traditions.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": true,
+      "publicTransport": true
+    },
+    "visitorRating": "4.7",
+    "contactDetails": {
+      "phone": "0761-2400010",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:13.140Z"
+  },
+  {
+    "id": 14,
+    "name": "Bajnamath Mandir",
+    "category": "Temple",
+    "address": "Tilwara Ghat Road, Garha, Jabalpur, Madhya Pradesh",
+    "pinCode": "482003",
+    "latitude": "23.14200000",
+    "longitude": "79.88500000",
+    "entryFee": "Free",
+    "openingHours": "8:00 AM - 6:00 PM",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800",
+        "attribution": "Unsplash/Bhairav"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=800",
+        "attribution": "Unsplash/Heritage"
+      }
+    ],
+    "description": "Bajnamath Mandir is a unique and ancient temple dedicated to Lord Bhairav, a fierce form of Lord Shiva. Built in the 16th century by the Gond ruler Sangram Shah, the temple is known for its association with the Tantric sect. The architecture is distinct, with a dark sanctum where the deity is worshipped with rituals involving smoke and liquor. According to legend, Sangram Shah never lost a battle after worshipping here. The temple is located near the Medical College in the Garha area. Mondays are particularly busy when devotees flock to the temple in large numbers. It remains an important site for those interested in the mystical and historical aspects of the Gondwana era, offering a different spiritual experience compared to other city temples.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": false,
+      "publicTransport": true
+    },
+    "visitorRating": "4.3",
+    "contactDetails": {
+      "phone": "0761-2400011",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:13.525Z"
+  },
+  {
+    "id": 15,
+    "name": "Hanuman Tal",
+    "category": "Lake",
+    "address": "Hanumantal Ward, Jabalpur, Madhya Pradesh",
+    "pinCode": "482002",
+    "latitude": "23.18050000",
+    "longitude": "79.94450000",
+    "entryFee": "Free",
+    "openingHours": "Open 24 hours",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=800",
+        "attribution": "Unsplash/LakeSide"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1582972236019-ea4af5faf581?w=800",
+        "attribution": "Unsplash/Water"
+      }
+    ],
+    "description": "Hanuman Tal is one of the most famous and historic lakes in Jabalpur, once serving as the city's central hub. According to legend, the lake was created when Lord Hanuman stepped on the ground here. It is one of the few remaining of the 52 historic ponds (tals) built by the Gond rulers. The lake is surrounded by several religious structures, most notably the Hanumantal Bada Jain Mandir. In recent years, the municipal corporation has undertaken beautification projects, including lighting and seating areas, making it a popular spot for evening strolls. The lake reflects the city's old-world charm and its deep-seated religious sentiments. It is a vital part of Jabalpur's urban ecosystem and cultural landscape, especially during festivals when the banks are brightly decorated.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": true,
+      "publicTransport": true
+    },
+    "visitorRating": "4.0",
+    "contactDetails": {
+      "phone": "0761-2400012",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:13.899Z"
+  },
+  {
+    "id": 16,
+    "name": "Gulaua Tal",
+    "category": "Lake",
+    "address": "Garha, Jabalpur, Madhya Pradesh",
+    "pinCode": "482003",
+    "latitude": "23.14700000",
+    "longitude": "79.89200000",
+    "entryFee": "Free",
+    "openingHours": "Open 24 hours",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800",
+        "attribution": "Unsplash/Pond"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?w=800",
+        "attribution": "Unsplash/BlueWater"
+      }
+    ],
+    "description": "Gulaua Tal is another significant historic pond among the 52 tals of Jabalpur, located in the Garha area. It was originally created during the Gondwana reign to manage the city's water supply and provide a recreational space. Today, it stands as a peaceful water body surrounded by residential areas and small temples. The lake is known for its scenic beauty, especially during the monsoon when it is full. Recent restoration efforts have improved its surroundings, making it a pleasant spot for local residents and visitors to enjoy the natural breeze. Like other tals in the city, Gulaua Tal carries the legacy of the Gond queen Rani Durgavati's vision for a water-rich city. It is a quiet, less commercialized spot that offers a glimpse into the historic water management systems of ancient Jabalpur.",
+    "accessibility": {
+      "parking": true,
+      "wheelchair": false,
+      "publicTransport": true
+    },
+    "visitorRating": "3.8",
+    "contactDetails": {
+      "phone": "0761-2400013",
+      "website": "https://jabalpur.nic.in"
+    },
+    "createdAt": "2026-03-25T20:57:14.273Z"
+  }
+]

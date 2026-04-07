@@ -1,0 +1,21 @@
+Summary Report of Newly Added Attractions
+==========================================
+Total Attractions Added: 16
+
+List of Attractions:
+ID: 1 | Name: Bhawartal Garden | Category: Park
+ID: 2 | Name: Dumna Nature Reserve | Category: Nature Reserve
+ID: 3 | Name: Kachnar City Shiva Temple | Category: Temple
+ID: 4 | Name: Pisanhari Ki Madiya | Category: Temple
+ID: 5 | Name: Tilwara Ghat | Category: River Ghat
+ID: 6 | Name: Bargi Dam | Category: Dam
+ID: 7 | Name: Rani Durgavati Museum | Category: Museum
+ID: 8 | Name: Hanumantal Bada Jain Mandir | Category: Temple
+ID: 9 | Name: Tagore Garden | Category: Park
+ID: 10 | Name: Shaheed Smarak | Category: Monument
+ID: 11 | Name: Shri Siddh Ganesh Mandir | Category: Temple
+ID: 12 | Name: Madan Mahal Fort | Category: Fort
+ID: 13 | Name: Tripur Sundari Temple | Category: Temple
+ID: 14 | Name: Bajnamath Mandir | Category: Temple
+ID: 15 | Name: Hanuman Tal | Category: Lake
+ID: 16 | Name: Gulaua Tal | Category: Lake
