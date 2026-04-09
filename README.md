@@ -104,13 +104,7 @@ hotel manegment/
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd "hotel manegment"
-   ```
-
-2. **Install dependencies**
+1. **Install dependencies**
    ```bash
    # Install backend dependencies
    cd backend
@@ -121,7 +115,7 @@ hotel manegment/
    npm install
    ```
 
-3. **Environment Setup**
+2. **Environment Setup**
 
    Backend `.env` (backend/src/.env):
    ```env
@@ -140,7 +134,7 @@ hotel manegment/
    VITE_APP_DESCRIPTION=Luxury Hotel Booking Platform
    ```
 
-4. **Database Setup**
+3. **Database Setup**
    ```bash
    cd backend
    npm run db:generate
@@ -148,7 +142,7 @@ hotel manegment/
    npm run db:seed
    ```
 
-5. **Run the Application**
+4. **Run the Application**
 
    Start backend server:
    ```bash
