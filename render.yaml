@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: hotel-management-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: FRONTEND_URL
+        value: https://your-vercel-app-url.vercel.app
+      - key: JWT_SECRET
+        fromContext: secret
+      - key: DATABASE_URL
+        fromContext: secret
