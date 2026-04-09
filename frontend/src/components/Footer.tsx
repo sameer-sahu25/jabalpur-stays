@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { 
   Phone, 
   Mail, 
@@ -8,10 +9,13 @@ import {
   Instagram, 
   Twitter, 
   Send,
-  ArrowUp
+  ArrowUp,
+  Loader2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { subscribeNewsletter } from "@/lib/api";
+import { toast } from "sonner";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -39,8 +43,27 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const [email, setEmail] = useState("");
+  const [isSubscribing, setIsSubscribing] = useState(false);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setIsSubscribing(true);
+    try {
+      await subscribeNewsletter(email);
+      toast.success("Subscribed successfully! Check your inbox for exclusive offers.");
+      setEmail("");
+    } catch (error: any) {
+      toast.error(error.message || "Failed to subscribe. Please try again.");
+    } finally {
+      setIsSubscribing(false);
+    }
   };
 
   return (
@@ -57,16 +80,28 @@ export function Footer() {
                 Get exclusive offers and travel tips delivered to your inbox.
               </p>
             </div>
-            <div className="flex w-full md:w-auto gap-3">
+            <form onSubmit={handleSubscribe} className="flex w-full md:w-auto gap-3">
               <Input
                 type="email"
                 placeholder="Enter your email"
                 className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 w-full md:w-80"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={isSubscribing}
               />
-              <Button className="bg-gold hover:bg-gold-dark text-accent-foreground">
-                <Send className="h-5 w-5" />
+              <Button 
+                type="submit" 
+                className="bg-gold hover:bg-gold-dark text-accent-foreground"
+                disabled={isSubscribing}
+              >
+                {isSubscribing ? (
+                  <Loader2 className="h-5 w-5 animate-spin" />
+                ) : (
+                  <Send className="h-5 w-5" />
+                )}
               </Button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -149,20 +184,20 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+917612345678"
+                  href="tel:+917772821732"
                   className="flex items-center gap-3 text-primary-foreground/70 hover:text-gold transition-colors text-sm"
                 >
                   <Phone className="h-5 w-5 text-gold" />
-                  +91 761 234 5678
+                  +91 7772821732
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@narmadaretreat.com"
+                  href="mailto:nxtsameer853@gmail.com"
                   className="flex items-center gap-3 text-primary-foreground/70 hover:text-gold transition-colors text-sm"
                 >
                   <Mail className="h-5 w-5 text-gold" />
-                  info@narmadaretreat.com
+                  nxtsameer853@gmail.com
                 </a>
               </li>
             </ul>

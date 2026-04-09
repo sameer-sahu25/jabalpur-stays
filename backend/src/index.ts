@@ -9,6 +9,7 @@ import hotelRoutes from './routes/hotelRoutes';
 import roomRoutes from './routes/roomRoutes';
 import bookingRoutes from './routes/bookingRoutes';
 import offerRoutes from './routes/offerRoutes';
+import contactRoutes from './routes/contactRoutes';
 import { errorHandler } from './middleware/errorHandler';
 import { AppError } from './utils/AppError';
 
@@ -29,6 +30,7 @@ app.use('/api/hotels', hotelRoutes);
 app.use('/api/rooms', roomRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/offers', offerRoutes);
+app.use('/api/contact', contactRoutes);
 
 // 404 Handler
 app.all(/(.*)/, (req, res, next) => {

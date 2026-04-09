@@ -4,8 +4,10 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock, Send, MessageSquare, Building, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, MessageSquare, Building, Globe, Loader2 } from "lucide-react";
 import { GlowEffect } from "@/components/GlowEffect";
+import { submitContactMessage } from "@/lib/api";
+import { toast } from "sonner";
 
 const contactInfo = [
   {
@@ -16,12 +18,12 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+91 761 240 1234", "+91 761 240 5678", "Toll Free: 1800-123-4567"],
+    details: ["+91 7772821732"],
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["reservations@narmadajabalpur.com", "info@narmadajabalpur.com", "support@narmadajabalpur.com"],
+    details: ["nxtsameer853@gmail.com"],
   },
   {
     icon: Clock,
@@ -46,11 +48,27 @@ export default function Contact() {
     department: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    
+    try {
+      await submitContactMessage(formData);
+      toast.success("Message sent successfully! We'll get back to you soon.");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        department: "",
+        message: "",
+      });
+    } catch (error: any) {
+      toast.error(error.message || "Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -84,9 +102,33 @@ export default function Contact() {
                   <info.icon className="h-7 w-7 text-gold" />
                 </div>
                 <h3 className="font-serif text-xl font-bold text-foreground mb-3">{info.title}</h3>
-                {info.details.map((detail, idx) => (
-                  <p key={idx} className="text-muted-foreground text-sm">{detail}</p>
-                ))}
+                {info.details.map((detail, idx) => {
+                  if (info.title === "Phone") {
+                    return (
+                      <a 
+                        key={idx} 
+                        href={`tel:${detail.replace(/\s+/g, '')}`} 
+                        className="block text-muted-foreground text-sm hover:text-gold transition-colors"
+                      >
+                        {detail}
+                      </a>
+                    );
+                  }
+                  if (info.title === "Email") {
+                    return (
+                      <a 
+                        key={idx} 
+                        href={`mailto:${detail}`} 
+                        className="block text-muted-foreground text-sm hover:text-gold transition-colors"
+                      >
+                        {detail}
+                      </a>
+                    );
+                  }
+                  return (
+                    <p key={idx} className="text-muted-foreground text-sm">{detail}</p>
+                  );
+                })}
               </GlowEffect>
             ))}
           </div>
@@ -167,9 +209,17 @@ export default function Contact() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full h-12 bg-gold hover:bg-gold-dark text-accent-foreground font-bold">
-                  <Send className="h-4 w-4 mr-2" />
-                  Send Message
+                <Button 
+                  type="submit" 
+                  className="w-full h-12 bg-gold hover:bg-gold-dark text-accent-foreground font-bold"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                  ) : (
+                    <Send className="h-4 w-4 mr-2" />
+                  )}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </GlowEffect>
@@ -219,7 +269,7 @@ export default function Contact() {
                 <p className="text-primary-foreground/80 mb-4">Our support team is available 24/7</p>
                 <Button variant="outline" className="border-primary-foreground/50 text-primary-foreground bg-transparent hover:bg-primary-foreground/10">
                   <Phone className="h-4 w-4 mr-2" />
-                  Call Now: +91 761 240 1234
+                  Call Now: +91 7772821732
                 </Button>
               </div>
             </div>

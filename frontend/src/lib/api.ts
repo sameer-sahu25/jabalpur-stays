@@ -58,3 +58,17 @@ export async function validatePromoCode(codeData: { code: string; roomId: number
     body: JSON.stringify(codeData),
   });
 }
+
+export async function submitContactMessage(messageData: any) {
+  return fetchApi('/contact/message', {
+    method: 'POST',
+    body: JSON.stringify(messageData),
+  });
+}
+
+export async function subscribeNewsletter(email: string) {
+  return fetchApi('/contact/newsletter', {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+  });
+}

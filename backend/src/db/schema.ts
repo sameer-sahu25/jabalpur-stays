@@ -99,3 +99,21 @@ export const bookingsRelations = relations(bookings, ({ one }) => ({
     references: [rooms.id],
   }),
 }));
+
+// Messages Table
+export const messages = pgTable('messages', {
+  id: serial('id').primaryKey(),
+  name: text('name').notNull(),
+  email: text('email').notNull(),
+  phone: text('phone'),
+  department: text('department').notNull(),
+  message: text('message').notNull(),
+  createdAt: timestamp('created_at').defaultNow(),
+});
+
+// Newsletters Table
+export const newsletters = pgTable('newsletters', {
+  id: serial('id').primaryKey(),
+  email: text('email').notNull().unique(),
+  createdAt: timestamp('created_at').defaultNow(),
+});
