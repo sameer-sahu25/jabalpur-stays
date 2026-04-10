@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://hotel-management-backend-onrender-com.onrender.com/api/:path*"
+      "destination": "https://jabalpur-stays-backend.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",
