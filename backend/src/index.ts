@@ -24,20 +24,29 @@ const allowedOrigins = [
   process.env.FRONTEND_URL,
   'http://localhost:5173',
   'http://localhost:6001',
-  'https://jabalpur-stays.vercel.app' // Add your probable Vercel URL here
+  'https://jabalpur-stays.vercel.app'
 ].filter(Boolean) as string[];
+
+console.log('Backend starting in mode:', process.env.NODE_ENV || 'development');
+console.log('Allowed CORS Origins:', allowedOrigins);
 
 app.use(cors({
   origin: (origin, callback) => {
     // allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.length === 0 || allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
+    
+    const isAllowed = allowedOrigins.some(o => o === origin || o.replace(/\/$/, '') === origin.replace(/\/$/, ''));
+    
+    if (isAllowed || process.env.NODE_ENV !== 'production') {
       callback(null, true);
     } else {
+      console.warn(`CORS blocked request from origin: ${origin}`);
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin']
 }));
 app.use(helmet());
 app.use(morgan('dev'));

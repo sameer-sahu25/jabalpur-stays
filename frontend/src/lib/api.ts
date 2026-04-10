@@ -1,8 +1,14 @@
 const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001/api';
 
+// Simple validation to warn about common issues in production
+if (import.meta.env.PROD && !import.meta.env.VITE_API_BASE_URL) {
+  console.warn('VITE_API_BASE_URL is not defined in production. API calls will likely fail.');
+}
+
 export async function fetchApi(endpoint: string, options: RequestInit = {}) {
   const url = `${API_URL}${endpoint}`;
-  console.log(`Fetching: ${url}`);
+  
+  // Use a more descriptive error for debugging in the browser console
   try {
     const response = await fetch(url, {
       ...options,
@@ -23,15 +29,24 @@ export async function fetchApi(endpoint: string, options: RequestInit = {}) {
     }
 
     if (!response.ok) {
-      console.error(`API Error (${response.status}):`, data);
+      console.error(`API Error (${response.status}) at ${url}:`, data);
       throw new Error(data.message || `API Error: ${response.status} ${response.statusText}`);
     }
 
     return data;
   } catch (error: any) {
     console.error(`Fetch failed for ${url}:`, error);
+    
+    // Check if it's a mixed content error or incorrect URL
     if (error.name === 'TypeError' && error.message === 'Failed to fetch') {
-      throw new Error('Network error: Could not reach the backend server. Please check your connection and ensure the backend is running.');
+      const isHttpsFrontend = window.location.protocol === 'https:';
+      const isHttpBackend = url.startsWith('http:');
+      
+      if (isHttpsFrontend && isHttpBackend) {
+        throw new Error('Mixed Content Error: Your frontend is on HTTPS but trying to call an HTTP backend. Please update VITE_API_BASE_URL to use HTTPS.');
+      }
+      
+      throw new Error(`Network error: Could not reach the backend at ${url}. Please check if the backend is running and the URL is correct.`);
     }
     throw error;
   }
