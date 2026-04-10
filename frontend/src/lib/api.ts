@@ -12,16 +12,27 @@ export async function fetchApi(endpoint: string, options: RequestInit = {}) {
       },
     });
 
-    const data = await response.json();
+    let data;
+    const contentType = response.headers.get("content-type");
+    if (contentType && contentType.indexOf("application/json") !== -1) {
+      data = await response.json();
+    } else {
+      const text = await response.text();
+      console.error(`Received non-JSON response from ${url}:`, text);
+      throw new Error(`Server error: Received non-JSON response (${response.status})`);
+    }
 
     if (!response.ok) {
       console.error(`API Error (${response.status}):`, data);
-      throw new Error(data.message || 'Something went wrong');
+      throw new Error(data.message || `API Error: ${response.status} ${response.statusText}`);
     }
 
     return data;
-  } catch (error) {
+  } catch (error: any) {
     console.error(`Fetch failed for ${url}:`, error);
+    if (error.name === 'TypeError' && error.message === 'Failed to fetch') {
+      throw new Error('Network error: Could not reach the backend server. Please check your connection and ensure the backend is running.');
+    }
     throw error;
   }
 }

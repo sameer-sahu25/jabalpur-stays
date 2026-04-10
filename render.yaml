@@ -5,12 +5,17 @@ services:
     rootDir: backend
     buildCommand: npm install && npm run build
     startCommand: npm start
+    healthCheckPath: /api/health
     envVars:
       - key: NODE_VERSION
         value: 18
       - key: FRONTEND_URL
-        value: https://your-vercel-app-url.vercel.app
+        value: https://jabalpur-stays.vercel.app
       - key: JWT_SECRET
-        fromContext: secret
+        generateValue: true
       - key: DATABASE_URL
-        fromContext: secret
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5001

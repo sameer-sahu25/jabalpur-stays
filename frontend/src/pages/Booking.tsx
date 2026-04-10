@@ -122,7 +122,14 @@ export default function Booking() {
   async function fetchRooms() {
     try {
       const data = await fetchApi(`/rooms?hotelId=${hotelId}`);
+      console.log("Rooms data received:", data);
       
+      if (!data || !data.data || !Array.isArray(data.data.rooms)) {
+        console.error("Invalid rooms data format:", data);
+        setAvailableTypes([]);
+        return;
+      }
+
       // Group by type and pick one representative for pricing
       const typesMap = new Map();
       data.data.rooms.forEach((room: Room) => {

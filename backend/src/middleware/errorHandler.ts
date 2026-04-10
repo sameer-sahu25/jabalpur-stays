@@ -13,8 +13,16 @@ export const errorHandler = (err: any, req: Request, res: Response, next: NextFu
       stack: err.stack,
     });
   } else {
-    // Production
-    if (err.isOperational) {
+      // Production
+      console.error('ERROR 💥', {
+        name: err.name,
+        message: err.message,
+        stack: err.stack,
+        statusCode: err.statusCode,
+        isOperational: err.isOperational
+      });
+      
+      if (err.isOperational) {
       res.status(err.statusCode).json({
         status: err.status,
         message: err.message,

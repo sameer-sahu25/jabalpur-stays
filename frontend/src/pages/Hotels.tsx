@@ -37,18 +37,24 @@ export default function Hotels() {
       
       if (response && response.data && Array.isArray(response.data.hotels)) {
         setHotels(response.data.hotels);
+        if (response.data.hotels.length === 0) {
+          toast({
+            title: "No Hotels Found",
+            description: "The database seems to be empty. Please ensure data is seeded.",
+          });
+        }
       } else if (Array.isArray(response)) {
         setHotels(response);
       } else {
         console.warn("Unexpected API response format:", response);
         setHotels([]);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Failed to load hotels:", error);
       toast({
         variant: "destructive",
-        title: "Error",
-        description: "Failed to load hotels. Please check if the backend is running.",
+        title: "Connection Error",
+        description: error.message || "Failed to load hotels. Please check if the backend is running.",
       });
     } finally {
       setIsLoading(false);
