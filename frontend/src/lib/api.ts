@@ -1,4 +1,16 @@
-const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001/api';
+const getApiUrl = () => {
+  const envUrl = import.meta.env.VITE_API_BASE_URL;
+  if (envUrl) return envUrl;
+  
+  // In production (Vercel), we'll use a relative URL and proxy via vercel.json
+  if (import.meta.env.PROD) {
+    return '/api';
+  }
+  
+  return 'http://localhost:5001/api';
+};
+
+const API_URL = getApiUrl();
 
 // Simple validation to warn about common issues in production
 if (import.meta.env.PROD && (!import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_BASE_URL.startsWith('http:'))) {
