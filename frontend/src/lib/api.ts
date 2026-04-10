@@ -1,12 +1,14 @@
 const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001/api';
 
 // Simple validation to warn about common issues in production
-if (import.meta.env.PROD && !import.meta.env.VITE_API_BASE_URL) {
-  console.warn('VITE_API_BASE_URL is not defined in production. API calls will likely fail.');
+if (import.meta.env.PROD && (!import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_BASE_URL.startsWith('http:'))) {
+  console.warn('VITE_API_BASE_URL is not defined or is using insecure HTTP in production. API calls will likely fail due to Mixed Content restrictions.');
 }
 
 export async function fetchApi(endpoint: string, options: RequestInit = {}) {
-  const url = `${API_URL}${endpoint}`;
+  // Ensure we don't have double slashes if endpoint starts with one
+  const cleanEndpoint = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
+  const url = `${API_URL}${cleanEndpoint}`;
   
   // Use a more descriptive error for debugging in the browser console
   try {
@@ -25,7 +27,7 @@ export async function fetchApi(endpoint: string, options: RequestInit = {}) {
     } else {
       const text = await response.text();
       console.error(`Received non-JSON response from ${url}:`, text);
-      throw new Error(`Server error: Received non-JSON response (${response.status})`);
+      throw new Error(`Server error: Received non-JSON response (${response.status}) from ${url}`);
     }
 
     if (!response.ok) {
@@ -43,10 +45,10 @@ export async function fetchApi(endpoint: string, options: RequestInit = {}) {
       const isHttpBackend = url.startsWith('http:');
       
       if (isHttpsFrontend && isHttpBackend) {
-        throw new Error('Mixed Content Error: Your frontend is on HTTPS but trying to call an HTTP backend. Please update VITE_API_BASE_URL to use HTTPS.');
+        throw new Error(`Mixed Content Error: Your frontend is on HTTPS (${window.location.origin}) but trying to call an HTTP backend (${url}). Update your VITE_API_BASE_URL environment variable to use HTTPS (https://).`);
       }
       
-      throw new Error(`Network error: Could not reach the backend at ${url}. Please check if the backend is running and the URL is correct.`);
+      throw new Error(`Network error: Could not reach the backend at ${url}. Ensure the backend is running and CORS is correctly configured for ${window.location.origin}`);
     }
     throw error;
   }
